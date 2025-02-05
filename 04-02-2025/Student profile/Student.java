@@ -1,4 +1,3 @@
-package tech;
 
 public class Student {
     private int id;
