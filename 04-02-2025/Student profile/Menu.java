@@ -1,4 +1,3 @@
-package tech;
 
 import java.util.ArrayList;
 import java.util.Scanner;
