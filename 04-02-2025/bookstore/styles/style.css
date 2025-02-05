@@ -1,0 +1,98 @@
+/* Global Styles for the body */
+html, body {
+    height: 100%; /* Ensure the body and html take up the full height */
+    margin: 0; /* Remove default margin */
+  }
+    
+ 
+
+body {
+    background-color:rgb(200, 196, 196); /* Light background color */
+    font-family: 'Arial', sans-serif; /* Default font family */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Default text color */
+    display: flex;
+    flex-direction: column;
+  }
+  main
+  {
+    flex: 1;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #333; /* Dark background for header */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight:bold;
+  }
+  
+  ul a{
+    all:unset;
+  }
+  
+  ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the items */
+    gap: 25px;
+    font-size: large;
+    align-items: center;
+    
+  }
+  
+  li:hover{
+ color: #000000;
+ background-color: #ffffff ;
+  }
+  
+  footer {
+    
+    
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .books{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .bookcollection
+  {
+   text-align: center; 
+  }
+  .books div{
+    border-radius: 10px;
+    border: 1px solid #333;
+    padding: 5px;
+  }
+  .books div:hover{
+    box-shadow: 2px 2px 30px 4px black;
+  }
+  .books div img
+  {
+    height: 250px;
+    width: 160px;
+  }
+  form{
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 100px auto;
+    padding: 10px;
+  }
