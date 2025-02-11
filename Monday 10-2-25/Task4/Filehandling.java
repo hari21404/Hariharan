@@ -86,7 +86,7 @@ public class Filehandling {
         System.out.println("1. Create folder with three file");
         System.out.println("2. Create folder with four file");
         System.out.println("3. Create three files");
-        System.out.println("4. Read file");
+        System.out.println("4. Change path");
         System.out.println("5. Exit");
     }
 }
