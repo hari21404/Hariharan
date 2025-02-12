@@ -13,7 +13,7 @@ public class FileCreate {
         File f= new File(path+foldername+"/");
         f.mkdir();
         System.out.println(foldername +" is created");
-        return path+foldername;
+        return path+foldername+"/";
     }
     public static void createfile(String path) throws IOException{
         System.out.println("Enter the File name");
