@@ -10,7 +10,7 @@ public class FileCreate {
     public static  String createfolder(String path) {
         System.out.println("Enter the folder name");
         String foldername=in.nextLine();
-        File f= new File(path+foldername);
+        File f= new File(path+foldername+"/");
         f.mkdir();
         System.out.println(foldername +" is created");
         return path+foldername;
