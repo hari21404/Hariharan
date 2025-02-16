@@ -1,0 +1,10 @@
+let m=prompt("Enther first no");
+let n=prompt("Enter second number");
+let x=n+40;
+let i=1;
+while((i*m)<x)
+{
+    if((i*m)>n)
+        console.log((i*m));
+    i++;
+}

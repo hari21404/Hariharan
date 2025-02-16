@@ -1,0 +1,9 @@
+let m=prompt("Enther first no");
+let n=prompt("Enter second number");
+
+while(m<n)
+{
+    if(m%7!=0)
+        console.log(m);
+    m++;
+}
