@@ -4,7 +4,7 @@ public class Task1 {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/mydatabase";
         String user = "root";
-        String password = "Arun@123";
+        String password = "Tiger";
 
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
             String insertSQL = "INSERT INTO students (name, age) VALUES (?, ?)";
