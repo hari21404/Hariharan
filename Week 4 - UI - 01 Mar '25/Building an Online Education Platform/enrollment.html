@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enroll in a Course</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Course Enrollment</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="instructors.html">Instructors</a>
+    <a href="enrollment.html">Enroll</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Enroll in a Course</h2>
+      <form id="enroll-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+        <label for="course">Select Course</label>
+        <select id="course" name="course" required>
+          <option value="course1">Introduction to Programming</option>
+          <option value="course2">Advanced JavaScript</option>
+          <option value="course3">Web Development Bootcamp</option>
+          <option value="course4">Data Science with Python</option>
+          <option value="course5">Machine Learning Basics</option>
+        </select><br>
+
+        <input type="submit" value="Enroll now">
+      </form>
+
+  
+      <div id="success-message" style="display: none;">
+        <h3>Thank you for enrolling!</h3>
+        <p>Your enrollment has been successfully submitted.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Online Education Platform</p>
+  </footer>
+
+  <script>
+    document.getElementById('enroll-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const course = document.getElementById('course').value;
+
+      if (name && email && course) {
+        document.getElementById('enroll-form').reset();  
+        document.getElementById('success-message').style.display = 'block';
+        alert('Please fill out all fields.');
+      }
+    });
+  </script>
+</body>
+</html>

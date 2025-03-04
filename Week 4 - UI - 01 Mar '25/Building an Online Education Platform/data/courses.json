@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "title": "Introduction to Programming",
+      "instructor": "John Doe",
+      "description": "Learn the basics of programming using Python.",
+      "prerequisites": "None",
+      "image": "course1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Advanced JavaScript",
+      "instructor": "Jane Smith",
+      "description": "Master the advanced concepts of JavaScript.",
+      "prerequisites": "Basic knowledge of JavaScript",
+      "image": "course2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Web Development Bootcamp",
+      "instructor": "Alice Johnson",
+      "description": "Become a web developer by learning HTML, CSS, and JavaScript.",
+      "prerequisites": "None",
+      "image": "course3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Data Science with Python",
+      "instructor": "Emily Davis",
+      "description": "Learn how to analyze and visualize data with Python.",
+      "prerequisites": "Basic knowledge of Python",
+      "image": "course4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Machine Learning Basics",
+      "instructor": "Michael Lee",
+      "description": "An introduction to machine learning algorithms and techniques.",
+      "prerequisites": "Basic understanding of statistics",
+      "image": "course5.jpg"
+    }
+  ]
+  
