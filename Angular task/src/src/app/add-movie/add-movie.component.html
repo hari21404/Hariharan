@@ -1,0 +1,66 @@
+<div class="container mt-4">
+    <h1>Add New Movie</h1>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="title" class="form-label">Movie Title</label>
+            <input type="text" class="form-control" id="title" formControlName="title">
+            <div *ngIf="submitted && movieForm.controls['title'].errors" class="text-danger">
+              Title is required
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" rows="3" formControlName="description"></textarea>
+            <div *ngIf="submitted && movieForm.controls['description'].errors" class="text-danger">
+              Description is required
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="imageUrl" class="form-label">Image URL</label>
+            <input type="text" class="form-control" id="imageUrl" formControlName="imageUrl">
+            <div *ngIf="submitted && movieForm.controls['imageUrl'].errors" class="text-danger">
+              Image URL is required
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="rating" class="form-label">Rating (1-5)</label>
+            <input type="number" class="form-control" id="rating" min="1" max="5" formControlName="rating">
+            <div *ngIf="submitted && movieForm.controls['rating'].errors" class="text-danger">
+              Rating must be between 1 and 5
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="releaseDate" class="form-label">Release Date</label>
+            <input type="date" class="form-control" id="releaseDate" formControlName="releaseDate">
+            <div *ngIf="submitted && movieForm.controls['releaseDate'].errors" class="text-danger">
+              Release date is required
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="genre" class="form-label">Genre</label>
+            <select class="form-select" id="genre" formControlName="genre">
+              <option value="">Select a genre</option>
+              <option value="Action">Action</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Drama">Drama</option>
+              <option value="Horror">Horror</option>
+              <option value="Sci-Fi">Sci-Fi</option>
+              <option value="Thriller">Thriller</option>
+            </select>
+            <div *ngIf="submitted && movieForm.controls['genre'].errors" class="text-danger">
+              Genre is required
+            </div>
+          </div>
+  
+          <button type="submit" class="btn btn-primary">Add Movie</button>
+        </form>
+      </div>
+    </div>
+  </div>

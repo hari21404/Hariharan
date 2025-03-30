@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <h1>Latest Movie Reviews</h1>
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let movie of movies">
+        <div class="card h-100">
+          <img [src]="movie.imageUrl" class="card-img-top" alt="{{movie.title}}" style="height: 300px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">{{movie.title}}</h5>
+            <p class="card-text">
+              <span *ngFor="let star of getStars(movie.rating)" class="text-warning">★</span>
+              <span class="ms-1">{{movie.rating}}/5</span>
+            </p>
+            <p class="card-text">{{movie.description | slice:0:100}}...</p>
+            <a [routerLink]="['/movie', movie.id]" class="btn btn-primary">Read More</a>
+          </div>
+          <div class="card-footer text-muted">
+            Genre: {{movie.genre}} | Released: {{movie.releaseDate}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

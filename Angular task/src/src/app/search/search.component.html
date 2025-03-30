@@ -1,0 +1,45 @@
+<div class="container mt-4">
+    <h1>Search Movies</h1>
+    <div class="row mb-4">
+      <div class="col-md-6 offset-md-3">
+        <div class="input-group">
+          <input 
+            #searchBox
+            type="text" 
+            class="form-control" 
+            placeholder="Search movies by title..."
+            (input)="search(searchBox.value)">
+          <button class="btn btn-primary" type="button" (click)="search(searchBox.value)">Search</button>
+        </div>
+        <small class="text-muted">Search works by movie title only</small>
+      </div>
+    </div>
+  
+    <div *ngIf="isSearching" class="text-center">
+      <p>Searching...</p>
+    </div>
+  
+    <div *ngIf="searchBox?.value && !isSearching && movies.length === 0" class="text-center mt-4">
+      <p>No movies found matching "{{searchBox.value}}". Try a different search term.</p>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let movie of movies">
+        <div class="card h-100">
+          <img [src]="movie.imageUrl" class="card-img-top" alt="{{movie.title}}" style="height: 300px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">{{movie.title}}</h5>
+            <p class="card-text">
+              <span *ngFor="let star of getStars(movie.rating)" class="text-warning">★</span>
+              <span class="ms-1">{{movie.rating}}/5</span>
+            </p>
+            <p class="card-text">{{movie.description | slice:0:100}}...</p>
+            <a [routerLink]="['/movie', movie.id]" class="btn btn-primary">Read More</a>
+          </div>
+          <div class="card-footer text-muted">
+            Genre: {{movie.genre}} | Released: {{movie.releaseDate}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
