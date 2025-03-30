@@ -1,0 +1,18 @@
+{
+  "appTitle": "Lost & Found",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "appDescription": "Welcome to the Lost & Found app! Here you can report lost items or check if someone has found something you've lost. You can also help others by reporting items you've found.",
+  "@appDescription": {
+    "description": "A brief description of the app"
+  },
+  "viewLostItems": "View Lost Items",
+  "@viewLostItems": {
+    "description": "Button text to view lost items"
+  },
+  "viewFoundItems": "View Found Items",
+  "@viewFoundItems": {
+    "description": "Button text to view found items"
+  }
+}
